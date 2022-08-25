@@ -15,17 +15,20 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: 1renatodevops/jenkins:latest
-        # image: jenkins/jenkins:lts-jdk11
+        image: jenkins/jenkins:lts-jdk11
+        # image: 1renatodevops/jenkins:latest
         resources:
           limits:
             memory: "1024Mi"
             cpu: "1000m"
         ports:
-        - containerPort: 8080
+          - name: http-port
+            containerPort: 8080
+          - name: jnlp-port
+            containerPort: 50000
         volumeMounts:
-        - name: jenkins-home
-          mountPath: /var/jenkins_home
+          - name: jenkins-home
+            mountPath: /var/jenkins_home
       volumes:
-      - name: jenkins-home
-        emptyDir: { }
+        - name: jenkins-home
+          emptyDir: { }

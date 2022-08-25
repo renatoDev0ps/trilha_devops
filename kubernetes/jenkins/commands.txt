@@ -1,0 +1,205 @@
+    1  systemctl jenkins status
+    2  ps aux | grep java
+    3  service jenkins start
+    4  ps aux | grep java
+    5  service jenkins status
+    6  ls -la /var/log/jenkins/
+    7  ps aux | grep java
+    8  cat /var/lib/jenkins/secrets/initialAdminPassword
+    9  yum install git
+   10  usermod -aG docker jenkins
+   11  chown jenkins:docker /var/run/docker.sock
+   12  echo 'abc'
+   13  echo $?
+   14  docker ps
+   15  service jenkins status
+   16  yum install net-tools -y
+   17  telnet 192.168.1.8 9000
+   18  yum install telnet -y
+   19  telnet 192.168.1.8 9000
+   20  yum install -y unzip
+   21  wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
+   22  sudo unzip sonar-scanner-cli-4.6.2.2472-linux.zip -d /opt/
+   23  sudo mv /opt/sonar-scanner-4.6.2.2472-linux/* /opt/sonar-scanner
+   24  chown -R jenkins:jenkins /opt/sonar-scanner
+   25  cd /opt
+   26  ls -la
+   27  wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
+   28  sudo unzip sonar-scanner-cli-4.6.2.2472-linux.zip -d /opt/
+   29  ls -la
+   30  rm -rf chown\ -R\ jenkins\:jenkins\ /
+   31  rm -rf sonar-scanner-4.6.2.2472-linux/
+   32  rm -rf sonar-scanner-cli-4.6.2.2472-linux.zip 
+   33  rm -f sonar-scanner 
+   34  ls -la
+   35  pwd
+   36  mkdir sonar-scanner
+   37  ls -la
+   38  wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
+   39  sudo mkdir -p /opt/sonar-scanner
+   40  sudo unzip sonar-scanner-cli-4.6.2.2472-linux.zip -d /opt/
+   41  sudo mv /opt/sonar-scanner-4.6.2.2472-linux/* /opt/sonar-scanner
+   42  chown -R jenkins:jenkins /opt/sonar-scanner
+   43  echo 'export PATH=$PATH:/opt/sonar-scanner/bin' | sudo tee -a /etc/profile
+   44  ls -la sonar-scanner
+   45  service sonar status
+   46  cat /etc/profile
+   47  curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+   48  yum install nodejs -y
+   49  sonar-scanner
+   50  cd /var/lib/jenkins/workspace/
+   51  ls -la
+   52  cd redis-app
+   53  ls -la
+   54  cd ../
+   55  ls -lha
+   56  cp -r redis-app /root/
+   57  cd /root
+   58  ls -la
+   59  cd redis-app/
+   60  ls 
+   61  docker build -t 1renatodevops/app .
+   62  docker images
+   63  docker login http://192.168.1.10:8123
+   64  vi /etc/docker/
+   65  ls /etc/docker/
+   66  cat /etc/docker/key.json 
+   67  vi /etc/docker/daemon.json
+   68  service docker restart
+   69  docker login http://192.168.1.10:8123
+   70  docker images
+   71  docker rmi -f 3385de591618 e71be5a1655b 19e69004ed8e c0586ac9df53 9c781c666286 b30b5bfc1015 fce42b115b1c 7febdf775745 35a000351bf4 f2fc1fec604a 699424fa6a17
+   72  docker images
+   73  docker tag 1renatodevops/app:latest http://192.168.1.10:8123/1renatodevops/app
+   74  docker tag 1renatodevops/app:latest 192.168.1.10:8123/1renatodevops/app
+   75  docker images
+   76  docker push 192.168.1.10:8123/1renatodevops/app
+   77  date
+   78  timedatectl list-timezones
+   79  ls -l /etc/localtime
+   80  ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+   81  ls -l /etc/localtime
+   82  date
+   83  yum install ntpdate -y
+   84  ntpdate a.ntp.br
+   85  systemctl enable ntpdate
+   86  systemctl restart ntpdate
+   87  ls -la
+   88  cd redis-app/
+   89  ls -la
+   90  cat index.html
+   91  cat index.html.1
+   92  cat index.html.2
+   93  cat index.html.3
+   94  cat index.html.4
+   95  ls -la
+   96  history
+   97  ls -a /etc/docker/
+   98  cat /etc/docker/daemon.json 
+   99  history
+  100  docker images
+  101  ls -la
+  102  cd redis-app/
+  103  ls -la
+  104  history | grep build
+  105  docker build -t devops/app .
+  106  history | grep tag
+  107  docker tag devops/app:latest 192.168.1.10:8123/devops/app
+  108  docker tag devops/app:latest http://192.168.1.10:8123/devops/app
+  109  docker images
+  110  history | grep push
+  111  docker push 192.168.1.10:8123/devops/app
+  112  k get po -n devops
+  113  ls -la
+  114  history | grep enable
+  115  systemctl status jenkins
+  116  ls -la
+  117  cd ../
+  118  ls -la
+  119  curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+  120  sudo install -o root -g root -m 0775 kubectl /usr/local/bin/kubectl
+  121  kubectl version
+  122  su -s /bin/bash jenkins
+  123  usermod -s /bin/bash jenkins
+  124  sudo su - jenkins
+  125  ls -la
+  126  ls -la /home/vagrant/
+  127  sudo su - jenkins
+  128  history
+  129  vi /tmp/commands_jenkins_bash.txt
+  130  history >> /tmp/commands_jenkins_bash.txt
+  131  cat /tmp/commands_jenkins_bash.txt
+  132  systemctl status jenkins
+  133  history | grep enable
+  134  cd /vagrant
+  135  ls -la
+  136  tar -xvf node_exporter-1.4.0-rc.0.linux-amd64.tar.gz
+  137  ls
+  138  mv node_exporter-1.4.0-rc.0.linux-amd64 /opt/
+  139  cd /opt
+  140  ls
+  141  mv sonar-scanner-cli-4.6.2.2472-linux.zip /vagrant
+  142  ls
+  143  cd node_exporter-1.4.0-rc.0.linux-amd64/
+  144  nohup ./node_exporter &
+  145  ls
+  146  tail - nohup.out
+  147  telnet
+  148  telnet 192.168.1.16 9100
+  149  docker
+  150  docker run -d -p 9090:9090 --restart unless-stopped -v /vagrant/prometheus_jenkins.yml:/etc/prometheus/prometheus.yml --name prometheus_jenkins prom/prometheus
+  151  docker ps -a
+  152  docker logs -f prometheus_jenkins 
+  153  stress --cpu 8 --io 4 --vm 2 --vm-bytes 128M --timeout 60s
+  154  yum install -y stress
+  155  stress --cpu 8 --io 4 --vm 2 --vm-bytes 128M --timeout 60s
+  156  systemctl status jenkins
+  157  docker ps -a
+  158  docker logs -f prometheus_jenkins 
+  159  ls -la
+  160  mkdir kube-job
+  161  cd kube-job/
+  162  vi script.sh
+  163  vi Dockerfile
+  164  ls 
+  165  history | grep build
+  166  docker build -t kubejob/kubernetes-job-demo .
+  167  docker images
+  168  history | grep tag
+  169  docker images
+  170  docker tag kubejob/kubernetes-job-demo:latest http://192.168.1.10:8123/kubejob/kubernetes-job-demo
+  171  docker tag kubejob/kubernetes-job-demo:latest 192.168.1.10:8123/kubejob/kubernetes-job-demo
+  172  history | grep push
+  173  docker push 192.168.1.10:8123/kubejob/kubernetes-job-demo
+  174  vi script.sh 
+  175  vi Dockerfile 
+  176  docker build -t kubejob/kubernetes-job-demo:v1.0.0 .
+  177  docker tag kubejob/kubernetes-job-demo:v1.0.0 192.168.1.10:8123/kubejob/kubernetes-job-demo:v1.0.0
+  178  docker push 192.168.1.10:8123/kubejob/kubernetes-job-demo:v1.0.0
+  179  vi Dockerfile 
+  180  docker build -t kubejob/kubernetes-job-demo:v1.0.1 .
+  181  docker tag kubejob/kubernetes-job-demo:v1.0.1 192.168.1.10:8123/kubejob/kubernetes-job-demo:v1.0.1
+  182  docker push 192.168.1.10:8123/kubejob/kubernetes-job-demo:v1.0.1
+  183  ls -la
+  184  cat .kube/config
+  185  cat /root/.kube/config
+  186  ls -la
+  187  k
+  188  kubectl
+  189  ls -la .kube/
+  190  ls -la .kube/cache/
+  191  ls -la .kube/cache/http/
+  192  ls -la .kube/cache/http/.diskv-temp/
+  193  history
+  194  ls -la
+  195  k get pods
+  196  kubectl get pods
+  197  kubectl get pod
+  198  kubectl get all --all-namespaces
+  199  k
+  200  ls -la
+  201  ls -a redis-app/
+  202  cat redis-app/Dockerfile 
+  203  mysql
+  204  yum search java
+  205  ls -la
