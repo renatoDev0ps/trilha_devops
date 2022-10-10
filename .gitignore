@@ -3,3 +3,4 @@
 .vagrant/
 java-kubernetes/
 k8s-all-in-one/
+send_email/
